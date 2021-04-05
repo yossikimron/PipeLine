@@ -9,6 +9,7 @@ pipeline {
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
+                    export TEST=10
                 '''
                 input 'Enter to continue'
             }
@@ -16,6 +17,10 @@ pipeline {
         stage('Stage 2') {
             steps {
                 echo 'Hello world!' 
+                sh '''
+                    echo $TEST
+                '''
+                input 'Enter to continue'
             }
         }
     }
