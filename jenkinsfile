@@ -3,7 +3,7 @@ echo 'Hello there'
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Stage 1') {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
@@ -13,5 +13,9 @@ pipeline {
                 input 'Enter to continue'
             }
         }
+        stage('Stage 2') {
+            steps {
+                echo 'Hello world!' 
+            }
     }
 }
