@@ -14,7 +14,7 @@ pipeline {
                     ls -lah
               
                 '''
-                env.TEST = "10"
+                env.TEST = 10
                 input 'Enter to continue'
             }
         }
