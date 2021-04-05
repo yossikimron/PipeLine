@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 echo 'Hello there'
 pipeline {
+    parameters {
+            string(name: 'TEST', defaultValue: '')
+        }
     agent any
     stages {
         stage('Stage 1') {
