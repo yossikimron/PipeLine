@@ -2,7 +2,7 @@
 echo 'Hello there'
 pipeline {
     parameters {
-            string(name: 'TEST', defaultValue: 0 )
+            string(name: 'TEST', defaultValue: '0' )
         }
     agent any
     stages {
@@ -14,7 +14,7 @@ pipeline {
                     ls -lah
               
                 '''
-                env.TEST = 10
+                env.TEST = '10'
                 input 'Enter to continue'
             }
         }
