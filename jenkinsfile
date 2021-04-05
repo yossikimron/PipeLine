@@ -11,15 +11,14 @@ pipeline {
                     ls -lah
                     export TEST=10
                 '''
+                env.TEST = "This is a Test"
                 input 'Enter to continue'
             }
         }
         stage('Stage 2') {
             steps {
                 echo 'Hello world!' 
-                sh '''
-                    echo $TEST
-                '''
+                echo "${env.TEST}"
                 input 'Enter to continue'
             }
         }
