@@ -9,9 +9,9 @@ pipeline {
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
-                    export TEST=10
+              
                 '''
-                env.TEST = "This is a Test"
+                env.TEST = "10"
                 input 'Enter to continue'
             }
         }
