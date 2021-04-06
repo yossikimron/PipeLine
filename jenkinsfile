@@ -9,6 +9,7 @@ pipeline {
         stage('Stage 1') {
             steps {
                 sh 'echo "Hello World"'
+                echo "Test value is : ${env.TEST}"
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
@@ -21,7 +22,7 @@ pipeline {
         stage('Stage 2') {
             steps {
                 echo 'Hello world!' 
-                echo "${env.TEST}"
+                echo "Test value is : ${env.TEST}"
                 input 'Enter to continue'
             }
         }
